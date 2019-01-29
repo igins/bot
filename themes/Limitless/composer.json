@@ -1,0 +1,13 @@
+{
+    "name": "vendor/limitless",
+    "description": "Limitless theme.",
+    "type": "caffeinated-theme",
+    "autoload": {
+        "psr-4": {
+            "Themes\\Limitless\\": "src/"
+        }
+    },
+    "require": {
+        "caffeinated/composer": "*"
+    }
+}
