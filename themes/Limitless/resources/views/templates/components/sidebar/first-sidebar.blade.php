@@ -22,13 +22,13 @@
       <div class="card-body">
         <div class="media">
           <div class="mr-3">
-            <a href="#"><img src="../../../../global_assets/images/image.png" width="38" height="38" class="rounded-circle" alt=""></a>
+            <a href="#"><img src="{{$user->profile->avatar}}" width="38" height="38" class="rounded-circle" alt="{{$user->profile->full_name}}"></a>
           </div>
 
           <div class="media-body">
-            <div class="media-title font-weight-semibold">Victoria Baker</div>
+            <div class="media-title font-weight-semibold">{{$user->profile->full_name}}</div>
             <div class="font-size-xs opacity-50">
-              <i class="icon-pin font-size-sm"></i> &nbsp;Santa Ana, CA
+              {{--<i class="icon-pin font-size-sm"></i> &nbsp;Santa Ana, CA--}}
             </div>
           </div>
 

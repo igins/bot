@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->enum('status', ["allowed", "not_allowed", "banned", "pending", "active", "inactive"])->default('pending')->nullable();
             $table->timestamps();
         });
     }
