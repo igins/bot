@@ -4,7 +4,7 @@
   @if ($item->hasChildren())
 
   @elseif (null !== $item->data('type') and $item->type == "header" )
-    <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">{!! $item->title !!}</div> <i class="icon-menu" title="{!! $item->title !!}"></i></li>
+    <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">{!! $item->title !!}</div> <i class="{!! $item->icon !!}" title="{!! $item->title !!}"></i></li>
   @else
     <li class="nav-item">
       <a href="{!! $item->url() !!}" class="nav-link @if ($item->active) active @endif">

@@ -3,13 +3,9 @@
 namespace App;
 
 use App\Models\Profile;
-use Carbon\Carbon;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use jeremykenedy\LaravelRoles\Traits\HasRoleAndPermission;
-use Laravelrus\LocalizedCarbon\LocalizedCarbon;
-use Laravelrus\LocalizedCarbon\Traits\LocalizedEloquentTrait;
 
 /**
  * App\User
@@ -40,7 +36,6 @@ use Laravelrus\LocalizedCarbon\Traits\LocalizedEloquentTrait;
 class User extends Authenticatable
 {
     use Notifiable;
-    use HasRoleAndPermission;
 
     /**
      * The attributes that are mass assignable.
@@ -61,11 +56,7 @@ class User extends Authenticatable
     ];
 
     protected $with = [
-        "profile", "roles"
-    ];
-
-    protected $dates = [
-        'created_at'
+        "profile"
     ];
 
     public function profile()

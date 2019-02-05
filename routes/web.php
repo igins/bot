@@ -6,11 +6,11 @@ Route::group(['middleware'=>['web', 'forceHTTPS']], function()
     /**
      * Backend section
      */
-    Route::group(['namespace'=>'Backend', 'middleware'=>'core', 'as'=>'backend'], function()
+    Route::group(['namespace'=>'Backend', 'middleware'=>'core'], function()
     {
         Route::group(['prefix'=>'backend'], function()
         {
-            Route::get("/", ['uses'=>'DashboardController@index', 'as'=>'.dashboard']);
+            Route::get("/", ['uses'=>'DashboardController@index']);
 
             Route::group(['prefix'=>'settings'], function()
             {
@@ -19,8 +19,7 @@ Route::group(['middleware'=>['web', 'forceHTTPS']], function()
 
             Route::group(['prefix'=>'users'], function()
             {
-                Route::get("/",     ['uses'=>'UsersController@index', 'as'=>'.users']);
-                Route::get("/{id}", ['uses'=>'UsersController@show',  'as'=>'.users.show']);
+                Route::get("/", ['uses'=>'UsersController@index']);
             });
         });
     });

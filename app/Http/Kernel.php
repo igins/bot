@@ -44,8 +44,6 @@ class Kernel extends HttpKernel
 
         'core' => [
             \App\Http\Middleware\Backend\Core\GenerateMenus::class,
-            \App\Http\Middleware\Backend\Core\simpleAuth::class,
-            \App\Http\Middleware\Backend\Core\shareAuthorizedUser::class,
         ],
     ];
 
