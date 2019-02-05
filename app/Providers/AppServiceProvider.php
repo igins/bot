@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
+use Laravelrus\LocalizedCarbon\LocalizedCarbon;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $locale = 'ru';
+        $locale_CODE = 'ru_RU';
+
+        setlocale(LC_ALL, $locale . '.utf-8', $locale_CODE . '.utf-8', $locale, $locale_CODE);
+        app()->setLocale(config('app.locale'));
     }
 
     /**
