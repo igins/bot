@@ -21,7 +21,10 @@
         "laravel/tinker": "^1.0",
         "laravelrus/localized-carbon": "^2.3",
         "laravolt/avatar": "^2.1",
-        "lavary/laravel-menu": "^1.7"
+        "lavary/laravel-menu": "^1.7",
+        "lecturize/laravel-addresses": "^0.1.1",
+        "torann/geoip": "^1.0",
+        "webpatser/laravel-countries": "^1.5"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",

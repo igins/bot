@@ -6,6 +6,7 @@ use App\User;
 use Caffeinated\Themes\Facades\Theme;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Backend\BackendController as Backend;
+use Webpatser\Countries\Countries;
 
 class UsersController extends Backend
 {
@@ -23,7 +24,7 @@ class UsersController extends Backend
         return view(Theme::getCurrent() . "::app.users.index", compact('data'));
     }
 
-    public function show($id)
+    public function show(Request $request, $id)
     {
         $data = [
             'page' => [
@@ -32,8 +33,12 @@ class UsersController extends Backend
 
             ],
             'slug' => 'user_profile',
-            'user' => User::findOrFail($id)
+            'user' => User::findOrFail($id),
+            'countries' => Countries::all(),
+            'country' => geoip( $request->ip() )
         ];
+
+        debug($data);
 
         return view(Theme::getCurrent() . "::app.users.show", compact('data'));
     }

@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -165,6 +165,8 @@ return [
         /*
          * Package Service Providers...
          */
+        'Webpatser\Countries\CountriesServiceProvider',
+        Lecturize\Addresses\AddressesServiceProvider::class,
         'Laravelrus\LocalizedCarbon\LocalizedCarbonServiceProvider',
 
         /*
@@ -225,6 +227,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Countries' => Webpatser\Countries\CountriesFacade::class,
         'LocalizedCarbon'   => 'Laravelrus\LocalizedCarbon\LocalizedCarbon',
         'DiffFormatter'     => 'Laravelrus\LocalizedCarbon\DiffFactoryFacade',
 
