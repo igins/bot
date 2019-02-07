@@ -1,10 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProfilesTable extends Migration
+class CreatePositionUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +14,14 @@ class CreateProfilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('profiles', function (Blueprint $table) {
+        Schema::create('position_user', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('first_name')->nullable()->default(NULL);
-            $table->string('last_name')->nullable()->default(NULL);
-            $table->string('patronymic')->nullable()->default(NULL);
-            $table->enum('gender', ['male', 'female'])->nullable()->default(NULL);
-            $table->date('dob')->nullable()->default(NULL);
-            $table->string('avatar')->nullable()->default(NULL);
+            $table->integer('position_id')->unsigned()->index();
+            $table->foreign('position_id')->references('id')->on('positions')->onDelete('cascade');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->timestamp('from')->nullable()->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('to')->nullable()->default(NULL);
             $table->timestamps();
         });
     }
@@ -34,6 +33,6 @@ class CreateProfilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profiles');
+        Schema::dropIfExists('position_user');
     }
 }

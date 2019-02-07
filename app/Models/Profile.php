@@ -53,7 +53,6 @@ class Profile extends Model
     public function getFullNameAttribute()
     {
         $name = NULL;
-        $name .= ( $this->attributes['title'] )      ? $this->getAttribute("title") . " " : NULL;
         $name .= ( $this->attributes['first_name'] ) ? $this->getAttribute("first_name") . " " : NULL;
         $name .= ( $this->attributes['last_name'] )  ? $this->getAttribute("last_name") : NULL;
         return $name;

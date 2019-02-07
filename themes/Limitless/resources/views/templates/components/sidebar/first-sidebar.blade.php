@@ -29,6 +29,7 @@
             <div class="media-title font-weight-semibold">{{$user->profile->full_name}}</div>
             <div class="font-size-xs opacity-50">
               {{--<i class="icon-pin font-size-sm"></i> &nbsp;Santa Ana, CA--}}
+              {{$user->position->title}}
             </div>
           </div>
 

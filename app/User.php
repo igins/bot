@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Position;
 use App\Models\Profile;
 use Carbon\Carbon;
 use Illuminate\Notifications\Notifiable;
@@ -61,15 +62,29 @@ class User extends Authenticatable
     ];
 
     protected $with = [
-        "profile", "roles"
+        "profile", "roles", "positions"
     ];
 
     protected $dates = [
         'created_at'
     ];
 
+    protected $appends = [
+        'position'
+    ];
+
     public function profile()
     {
         return $this->hasOne(Profile::class);
+    }
+
+    public function positions()
+    {
+        return $this->belongsToMany(Position::class);
+    }
+
+    public function getPositionAttribute()
+    {
+        return $this->positions()->withPivot(['from', 'to'])->orderBy('position_user.from', 'desc')->first();
     }
 }

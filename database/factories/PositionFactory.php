@@ -2,8 +2,9 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(\App\Models\Position::class, function (Faker $faker) {
     return [
-        //
+        'department_id' => NULL,
+        'title' => $faker->jobTitle,
     ];
 });

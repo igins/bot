@@ -34,7 +34,7 @@
           </div>
         </td>
         <td class="text-center">{{$u->created_at->toFormattedDateString()}}</td>
-        <td></td>
+        <td>{{ $u->position->title }}</td>
         <td class="text-right">
 
           @component("limitless::app.users.components.status_component", ['type'=>$u->status])

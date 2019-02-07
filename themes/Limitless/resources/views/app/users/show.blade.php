@@ -27,7 +27,7 @@
                         </div>
 
                         <h6 class="font-weight-semibold mb-0">{{($data['user'])->profile->full_name}}</h6>
-                        <span class="d-block opacity-75">Head of UX</span>
+                        <span class="d-block opacity-75">{{($data['user']->position->title)}}</span>
 
                         {{--<div class="list-icons list-icons-extended mt-3">--}}
                             {{--<a href="#" class="list-icons-item text-white" data-popup="tooltip" title="" data-container="body" data-original-title="Google Drive"><i class="icon-google-drive"></i></a>--}}

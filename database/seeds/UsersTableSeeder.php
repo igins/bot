@@ -14,10 +14,15 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        $positions = \App\Models\Position::all();
+
         factory('App\User', 20)
                 ->create()
-                ->each(function($u) {
+                ->each(function($u) use ($positions) {
                     $u->profile()->save(factory('App\Models\Profile')->make());
+                    $u->positions()->attach(
+                        $positions->random(rand(1, 3))->pluck('id')->toArray()
+                    );
                 });
 
 //        $userRole = Role::where('name', '=', 'User')->first();
