@@ -370,7 +370,7 @@ var Timelines = function() {
         $('.sidebar-control').on('click', function() {
             daily_statistics.resize();
             weekly_statistics.resize();
-        })
+        });
 
         //  On window resizw
         var resizeCharts;

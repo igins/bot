@@ -55,7 +55,7 @@ var HotBasic = function() {
 
         $('.sidebar-control').on('click', function() {
             hot_basic_init.render();
-        })
+        });
 
 
 

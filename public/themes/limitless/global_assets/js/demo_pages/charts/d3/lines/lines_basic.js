@@ -45,7 +45,9 @@ var D3LineBasic = function() {
             var parseDate = d3.time.format("%d-%b-%y").parse,
                 bisectDate = d3.bisector(function(d) { return d.date; }).left,
                 formatValue = d3.format(",.2f"),
-                formatCurrency = function(d) { return "$" + formatValue(d); }
+                formatCurrency = function (d) {
+                    return "$" + formatValue(d);
+                };
 
 
 
@@ -193,7 +195,7 @@ var D3LineBasic = function() {
                 focus.append("text")
                     .attr("dy", ".35em")
                     .style("fill", "#333")
-                    .style("stroke", "none")
+                    .style("stroke", "none");
 
                 // Overlay
                 svg.append("rect")

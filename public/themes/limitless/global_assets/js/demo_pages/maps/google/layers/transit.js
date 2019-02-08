@@ -37,7 +37,7 @@ var GoogleMapLayerTransit = function() {
 			var mapOptions = {
 				zoom: 14,
 				center: myLatlng
-			}
+            };
 
 			// Apply options
 			var map = new google.maps.Map(map_layer_transit_element, mapOptions);

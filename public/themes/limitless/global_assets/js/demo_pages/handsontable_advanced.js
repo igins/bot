@@ -296,7 +296,7 @@ var HotAdvanced = function() {
         }
 
         // Define element
-        var hot_populate = document.getElementById('hot_populate')
+        var hot_populate = document.getElementById('hot_populate');
 
         // Initialize with options
         var hot_populate_init = new Handsontable(hot_populate, {

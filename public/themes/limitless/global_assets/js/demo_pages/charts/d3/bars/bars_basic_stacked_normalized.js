@@ -236,7 +236,7 @@ var D3BarNormalized = function() {
                 svg.selectAll('.bar-group').attr("transform", function(d) { return "translate(" + x(d.State) + ",0)"; });
 
                 // Bars
-                svg.selectAll('.d3-bar').attr("width", x.rangeBand())
+                svg.selectAll('.d3-bar').attr("width", x.rangeBand());
 
                 // Legend
                 svg.selectAll(".d3-legend").attr("transform", function(d) { return "translate(" + x.rangeBand() + "," + y((d.y0 + d.y1) / 2) + ")"; });

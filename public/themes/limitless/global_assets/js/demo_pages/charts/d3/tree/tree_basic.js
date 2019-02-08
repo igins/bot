@@ -172,7 +172,7 @@ var D3TreeBasic = function() {
                     // -------------------------
 
                     // Link paths
-                    svg.selectAll(".d3-tree-link").attr("d", diagonal)
+                    svg.selectAll(".d3-tree-link").attr("d", diagonal);
 
                     // Node paths
                     svg.selectAll(".d3-tree-node").attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });

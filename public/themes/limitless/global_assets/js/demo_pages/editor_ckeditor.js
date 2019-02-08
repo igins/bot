@@ -67,10 +67,10 @@ var CKEditor = function() {
         }
         document.getElementById('readOnlyOn').onclick = function() {
             toggleReadOnly();
-        }
+        };
         document.getElementById('readOnlyOff').onclick = function() {
             toggleReadOnly(false);
-        }
+        };
 
 
         // Enter key configuration
@@ -100,10 +100,10 @@ var CKEditor = function() {
         // // Change configuration
         document.getElementById('xEnter').onchange = function() {
             changeEnter();
-        }
+        };
         document.getElementById('xShiftEnter').onchange = function() {
             changeEnter();
-        }
+        };
 
 
 
@@ -131,8 +131,7 @@ var CKEditor = function() {
         if (!$().select2) {
             console.warn('Warning - select2.min.js is not loaded.');
             return;
-        };
-
+        }
         // Default initialization
         $('.form-control-select2').select2({
             minimumResultsForSearch: Infinity

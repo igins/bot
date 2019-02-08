@@ -22,8 +22,7 @@ var FormLayouts = function() {
         if (!$().select2) {
             console.warn('Warning - select2.min.js is not loaded.');
             return;
-        };
-
+        }
         // Basic example
         $('.form-control-select2').select2();
 

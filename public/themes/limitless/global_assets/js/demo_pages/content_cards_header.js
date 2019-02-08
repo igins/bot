@@ -47,8 +47,7 @@ var CardHeader = function() {
         if (!$().select2) {
             console.warn('Warning - select2.min.js is not loaded.');
             return;
-        };
-
+        }
         // Initialize
         $('.form-control-select2').select2({
             minimumResultsForSearch: Infinity

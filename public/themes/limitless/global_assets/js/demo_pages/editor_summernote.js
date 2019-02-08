@@ -47,7 +47,7 @@ var Summernote = function() {
         // Edit
         $('#edit').on('click', function() {
             $('.click2edit').summernote({focus: true});
-        })
+        });
 
         // Save
         $('#save').on('click', function() {

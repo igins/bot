@@ -35,7 +35,7 @@ var GoogleMapDisableUi = function() {
 				zoom: 12,
 				center: new google.maps.LatLng(48.858, 2.347),
 				disableDefaultUI: true
-			}
+            };
 
 			// Apply options
 			var map = new google.maps.Map(map_disable_ui_element, mapOptions);

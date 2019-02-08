@@ -340,7 +340,7 @@ var Pnotify = function() {
             // Remove if cancelled
             notice.get().find('button[name=cancel]').on('click', function() {
                 notice.remove();
-            })
+            });
 
             // Submit form
             notice.get().submit(function() {
@@ -431,12 +431,12 @@ var Pnotify = function() {
                     closer: false,
                     sticker: false
                 }
-            })
+            });
 
             // On confirm
             notice.get().on('pnotify.confirm', function() {
                 alert('Ok, cool.');
-            })
+            });
 
             // On cancel
             notice.get().on('pnotify.cancel', function() {
@@ -487,7 +487,7 @@ var Pnotify = function() {
                         sticker: true
                     }
                 });
-            })
+            });
 
             // On cancel
             notice.get().on('pnotify.cancel', function(e, notice) {

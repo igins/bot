@@ -60,8 +60,7 @@ var HorizontalMegaMenu = function () {
         if (!$().slinky) {
             console.warn('Warning - slinky.min.js is not loaded.');
             return;
-        };
-
+        }
         // Attach drill down menu to menu list with child levels
         $('.nav-item-multi').one('shown.bs.dropdown', function () {
             $('.dropdown-item-group').each(function() {

@@ -254,7 +254,7 @@ var VectorMaps = function() {
             280.71,
             210.32,
             325.42
-        ]
+        ];
 
         // Configuration
         var map = new jvm.WorldMap({

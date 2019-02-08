@@ -199,7 +199,7 @@ var D3LineSeries = function() {
                     .style("fill", "#999")
                     .style("font-size", 12)
                     .text("Temperature (ºF)");
-            })
+            });
 
 
 

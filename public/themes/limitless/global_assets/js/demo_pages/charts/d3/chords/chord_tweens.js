@@ -172,7 +172,7 @@ var D3ChordTweens = function() {
                             .attr("d", chord_svg)
                             .style("stroke", "#000")
                             .style("stroke-width", 0.5)
-                            .style("fill-opacity", 0.7)
+                        .style("fill-opacity", 0.7);
 
                     // Draw ticks
                     self.drawTicks();
@@ -290,10 +290,7 @@ var D3ChordTweens = function() {
                     matrix.push(row);
                 }
                 return matrix;
-            };
-
-
-
+            }
             // Initialize chart
             // ------------------------------
 

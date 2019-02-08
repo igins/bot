@@ -248,11 +248,7 @@ var D3ChordArcs = function() {
                     matrix.push(row);
                 }
                 return matrix;
-            };
-
-
-
-
+            }
             // Initialize chart
             // ------------------------------
 

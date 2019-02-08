@@ -213,7 +213,9 @@ var D3BarHorizontal = function() {
                 // -------------------------
 
                 // Line path
-                svg.selectAll('.d3-bar').attr("width", function(d) { return x(d.value); })
+                svg.selectAll('.d3-bar').attr("width", function (d) {
+                    return x(d.value);
+                });
 
                 // Text label
                 svg.selectAll('.d3-label-value').attr("x", function(d) { return x(d.value); });

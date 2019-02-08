@@ -174,7 +174,9 @@ var D3Treemap = function() {
                 // Cell rect transition
                 t.select("rect")
                     .attr("width", function(d) { return kx * d.dx - 1; })
-                    .attr("height", function(d) { return ky * d.dy - 1; })
+                    .attr("height", function (d) {
+                        return ky * d.dy - 1;
+                    });
 
                 // Text transition
                 t.select("text")

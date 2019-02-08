@@ -142,7 +142,7 @@ var HotContextMenu = function() {
         // ------------------------------
 
         // Define element
-        var hot_context_custom = document.getElementById('hot_context_custom')
+        var hot_context_custom = document.getElementById('hot_context_custom');
 
         // Initialize with options
         var hot_context_custom_init = new Handsontable(hot_context_custom, {

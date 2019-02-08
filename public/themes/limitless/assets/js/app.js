@@ -60,7 +60,7 @@ var App = function () {
                     }
                 }
             });
-        }
+        };
 
         // If sidebar is resized by default
         if($('body').hasClass('sidebar-xs')) {
@@ -180,7 +180,7 @@ var App = function () {
         $('.sidebar-mobile-expand').on('click', function (e) {
             e.preventDefault();
             var $sidebar = $(this).parents('.sidebar'),
-                sidebarFullscreenClass = 'sidebar-fullscreen'
+                sidebarFullscreenClass = 'sidebar-fullscreen';
 
             if(!$sidebar.hasClass(sidebarFullscreenClass)) {
                 $sidebar.addClass(sidebarFullscreenClass);

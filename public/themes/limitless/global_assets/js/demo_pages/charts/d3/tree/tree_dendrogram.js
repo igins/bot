@@ -112,7 +112,9 @@ var D3TreeDendrogram = function() {
                     .enter()
                     .append("g")
                         .attr("class", "d3-tree-node")
-                        .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+                    .attr("transform", function (d) {
+                        return "translate(" + d.y + "," + d.x + ")";
+                    });
 
                 // Append node circles
                 node.append("circle")
@@ -172,7 +174,7 @@ var D3TreeDendrogram = function() {
                     // -------------------------
 
                     // Link paths
-                    svg.selectAll(".d3-tree-link").attr("d", diagonal)
+                    svg.selectAll(".d3-tree-link").attr("d", diagonal);
 
                     // Node paths
                     svg.selectAll(".d3-tree-node").attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });

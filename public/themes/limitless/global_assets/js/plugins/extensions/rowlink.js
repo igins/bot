@@ -20,24 +20,24 @@
 +function ($) { "use strict";
 
   var Rowlink = function (element, options) {
-    this.$element = $(element)
-    this.options = $.extend({}, Rowlink.DEFAULTS, options)
+      this.$element = $(element);
+      this.options = $.extend({}, Rowlink.DEFAULTS, options);
 
     this.$element.on('click.bs.rowlink mouseup.bs.rowlink', 'td:not(.rowlink-skip)', $.proxy(this.click, this))
-  }
+  };
 
   Rowlink.DEFAULTS = {
     target: "a"
-  }
+  };
 
   Rowlink.prototype.click = function(e, ctrlKey) {
-    var target = $(e.currentTarget).closest('tr').find(this.options.target)[0]
+      var target = $(e.currentTarget).closest('tr').find(this.options.target)[0];
 
-    if (typeof target === 'undefined' || $(e.target)[0] === target) return
-    if (e.type === 'mouseup' && e.which !== 2) return
+      if (typeof target === 'undefined' || $(e.target)[0] === target) return;
+      if (e.type === 'mouseup' && e.which !== 2) return;
 
     e.preventDefault();
-    ctrlKey = ctrlKey || e.ctrlKey || (e.type === 'mouseup' && e.which === 2)
+      ctrlKey = ctrlKey || e.ctrlKey || (e.type === 'mouseup' && e.which === 2);
 
     if (!ctrlKey && target.click) {
       target.click()
@@ -50,46 +50,46 @@
        });
       target.dispatchEvent(evt);
     }
-  }
+  };
 
 
   // ROWLINK PLUGIN DEFINITION
   // ===========================
 
-  var old = $.fn.rowlink
+    var old = $.fn.rowlink;
 
   $.fn.rowlink = function (options) {
     return this.each(function () {
-      var $this = $(this)
-      var data = $this.data('bs.rowlink')
+        var $this = $(this);
+        var data = $this.data('bs.rowlink');
       if (!data) $this.data('bs.rowlink', (data = new Rowlink(this, options)))
     })
-  }
+  };
 
-  $.fn.rowlink.Constructor = Rowlink
+    $.fn.rowlink.Constructor = Rowlink;
 
 
   // ROWLINK NO CONFLICT
   // ====================
 
   $.fn.rowlink.noConflict = function () {
-    $.fn.rowlink = old
+      $.fn.rowlink = old;
     return this
-  }
+  };
 
 
   // ROWLINK DATA-API
   // ==================
 
   $(document).on('click.bs.rowlink.data-api mouseup.bs.rowlink.data-api', '[data-link="row"]', function (e) {
-    if (e.type === 'mouseup' && e.which !== 2) return
-    if ($(e.target).closest('.rowlink-skip').length !== 0) return
+      if (e.type === 'mouseup' && e.which !== 2) return;
+      if ($(e.target).closest('.rowlink-skip').length !== 0) return;
 
-    var $this = $(this)
-    if ($this.data('bs.rowlink')) return
-    $this.rowlink($this.data())
+      var $this = $(this);
+      if ($this.data('bs.rowlink')) return;
+      $this.rowlink($this.data());
 
-    var ctrlKey = e.ctrlKey || e.which === 2
+      var ctrlKey = e.ctrlKey || e.which === 2;
     $(e.target).trigger('click.bs.rowlink', [ctrlKey])
   })
 

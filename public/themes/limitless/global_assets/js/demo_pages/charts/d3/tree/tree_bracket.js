@@ -163,7 +163,7 @@ var D3TreeBracket = function() {
                 var rebuildChildren = function(node){
                     node.children = getChildren(node);
                     if(node.children) node.children.forEach(rebuildChildren);
-                }
+                };
                 rebuildChildren(root);
                 root.isRight = false;
                 update(root);

@@ -42,7 +42,7 @@ var GoogleMapControlOptions = function() {
                 zoomControlOptions: {
                     style: google.maps.ZoomControlStyle.SMALL
                 }
-            }
+            };
 
             // Apply options
             var map = new google.maps.Map(map_control_options_element, mapOptions);

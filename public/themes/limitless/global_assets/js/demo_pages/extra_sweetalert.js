@@ -31,7 +31,7 @@ var SweetAlert = function () {
                 confirmButtonClass: 'btn btn-primary',
                 cancelButtonClass: 'btn btn-light'
             });
-        }
+        };
         setCustomDefaults();
 
 
@@ -952,7 +952,7 @@ var SweetAlert = function () {
                             imageUrl: e.target.result,
                             imageAlt: 'The uploaded picture'
                         });
-                    }
+                    };
                     reader.readAsDataURL(result.value);
                 }
             });

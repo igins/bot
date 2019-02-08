@@ -121,7 +121,7 @@ var ContentWidgets = function() {
                 .attr('width', width + margin.left + margin.right)
                 .attr('height', height + margin.top + margin.bottom)
                 .append('g')
-                    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
+                .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
 
             // Construct chart layout
@@ -132,7 +132,7 @@ var ContentWidgets = function() {
                 .x(function(d) { return x(d.date); })
                 .y0(height)
                 .y1(function(d) { return y(d.value); })
-                .interpolate('monotone')
+                .interpolate('monotone');
 
 
             // Construct scales

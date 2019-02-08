@@ -216,8 +216,7 @@ var HotSearch = function() {
         // Exact match function
         function onlyExactMatch(queryStr, value) {
             return queryStr.toString() === value.toString();
-        };
-
+        }
         // Add event
         Handsontable.dom.addEvent(hot_search_query_input,'keyup', function(event) {
             var queryResult = hot_search_query_init.search.query(this.value);

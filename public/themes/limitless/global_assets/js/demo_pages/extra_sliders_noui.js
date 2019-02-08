@@ -990,7 +990,7 @@ var NouiSlider = function() {
                 'max': 10
             },
             direction: $('html').attr('dir') == 'rtl' ? 'rtl' : 'ltr'
-        }
+        };
 
         // Create sliders
         noUiSlider.create(color1, color_options);

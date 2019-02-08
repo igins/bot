@@ -112,7 +112,7 @@ var D3PieEntryAnimation = function() {
                         .ease("linear")
                         .delay(2000)
                         .duration(500)
-                        .style("opacity", 1)
+                    .style("opacity", 1);
 
 
                 // Tween

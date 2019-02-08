@@ -37,7 +37,7 @@ var GoogleMapControls = function() {
 				panControl: false,
 				zoomControl: false,
 				scaleControl: true
-			}
+            };
 
 			// Apply options
 			var map = new google.maps.Map(map_controls_element, mapOptions);
