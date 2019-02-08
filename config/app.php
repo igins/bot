@@ -165,9 +165,8 @@ return [
         /*
          * Package Service Providers...
          */
-        'Webpatser\Countries\CountriesServiceProvider',
+        Webpatser\Countries\CountriesServiceProvider::class,
         Lecturize\Addresses\AddressesServiceProvider::class,
-        'Laravelrus\LocalizedCarbon\LocalizedCarbonServiceProvider',
 
         /*
          * Application Service Providers...
@@ -228,8 +227,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Countries' => Webpatser\Countries\CountriesFacade::class,
-        'LocalizedCarbon'   => 'Laravelrus\LocalizedCarbon\LocalizedCarbon',
-        'DiffFormatter'     => 'Laravelrus\LocalizedCarbon\DiffFactoryFacade',
 
     ],
 

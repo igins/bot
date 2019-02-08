@@ -23,6 +23,7 @@ class UsersTableSeeder extends Seeder
                     $u->positions()->attach(
                         $positions->random(rand(1, 3))->pluck('id')->toArray()
                     );
+                    $u->addAddress(factory('Lecturize\Addresses\Models\Address')->make()->toArray());
                 });
 
 //        $userRole = Role::where('name', '=', 'User')->first();

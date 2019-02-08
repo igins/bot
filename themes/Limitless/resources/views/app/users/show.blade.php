@@ -102,7 +102,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form method="post" action="#">
+                        <form method="post" action="#" id="profile-form">
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-4">

@@ -4,13 +4,10 @@ namespace App;
 
 use App\Models\Position;
 use App\Models\Profile;
-use Carbon\Carbon;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use jeremykenedy\LaravelRoles\Traits\HasRoleAndPermission;
-use Laravelrus\LocalizedCarbon\LocalizedCarbon;
-use Laravelrus\LocalizedCarbon\Traits\LocalizedEloquentTrait;
+use Lecturize\Addresses\Traits\HasAddresses;
 
 /**
  * App\User
@@ -42,6 +39,7 @@ class User extends Authenticatable
 {
     use Notifiable;
     use HasRoleAndPermission;
+    use HasAddresses;
 
     /**
      * The attributes that are mass assignable.

@@ -20,7 +20,6 @@ class UsersController extends Backend
             'slug' => 'users',
             'users' => User::all()
         ];
-
         return view(Theme::getCurrent() . "::app.users.index", compact('data'));
     }
 
